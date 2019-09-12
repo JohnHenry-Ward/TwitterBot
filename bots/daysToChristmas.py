@@ -18,6 +18,7 @@ def main():
     api = create_api()
     while True:
         daysTil = daysToChristmas()
+        api.update_status(str(daysTil) + " days til Christmas.")
         logger.info("Tweeted: " + str(daysTil) + " days til Christmas.")
         logger.info("Be back in 24 hours...")
         time.sleep(86400)
