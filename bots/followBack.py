@@ -18,10 +18,12 @@ def followBack(api):
 
 def main():
     api = create_api()
-    while True:
+    running = True;
+    while (running):
         followBack(api)
         logger.info("Waiting...")
-        time.sleep(60)
+        #time.sleep(60)
+        running = False;
 
 if __name__ == "__main__":
     main()

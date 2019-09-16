@@ -16,12 +16,14 @@ def daysToChristmas():
 
 def main():
     api = create_api()
-    while True:
+    running = True;
+    while (running):
         daysTil = daysToChristmas()
         api.update_status(str(daysTil) + " days til Christmas.")
         logger.info("Tweeted: " + str(daysTil) + " days til Christmas.")
         logger.info("Be back in 24 hours...")
-        time.sleep(86400)
+        running = False;
+        #time.sleep(86400)
 
 if __name__ == "__main__":
     main()
